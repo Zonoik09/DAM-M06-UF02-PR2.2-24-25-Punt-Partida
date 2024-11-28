@@ -11,7 +11,7 @@ public class Main {
        File dir = new File(basePath);
        if (!dir.exists()) {
            if (!dir.mkdirs()) {
-               System.out.println("Error creating 'data' folder");
+               System.err.println("Error creating 'data' folder");
            }
        }
 

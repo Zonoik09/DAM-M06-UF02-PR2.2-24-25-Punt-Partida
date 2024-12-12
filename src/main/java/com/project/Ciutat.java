@@ -58,14 +58,14 @@ public class Ciutat {
 
     @Override
     public String toString() {
-        StringBuilder strbuild = new StringBuilder();
+        StringBuilder str = new StringBuilder();
         for (Ciutada ciutada : ciutadans) {
-            if (strbuild.length() > 0) {
-                strbuild.append(" | ");
+            if (str.length() > 0) {
+                str.append(" | ");
             }
-            strbuild.append(ciutada.getNom());
+            str.append(ciutada.getNom());
         }
-        return this.getCiutatId() + ": " + this.getNom() + ", " + this.getPais() + ", " + this.getPoblacio() + ", Ciutadans: [" + strbuild + "]";
+        return this.getCiutatId() + ": " + this.getNom() + ", " + this.getPais() + ", " + this.getPoblacio() + ", Ciutadans: [" + str + "]";
     }
 
 

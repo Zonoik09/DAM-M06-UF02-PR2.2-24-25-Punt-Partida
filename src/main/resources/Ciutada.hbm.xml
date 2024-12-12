@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "utf-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-   <class name = "com.project.Ciutada" table = "Ciutada">
+    <class name = "com.project.Ciutada" table = "Ciutada">
         <id name = "ciutadaId" type = "long" column = "ciutadaId">
             <generator class="native"/>
         </id>
@@ -10,8 +10,8 @@
         <property name = "cognom" column = "cognom" type = "string"/>
         <property name = "edat" column = "edat" type = "int"/>
 
-        <many-to-one name="ciutat" class="com.project.Ciutat">
+        <many-to-one name="ciutat" class="com.project.Ciutat" lazy="false">
             <column name="ciutatId" not-null="false" />
-        </many-to-one>   
+        </many-to-one>
     </class>
 </hibernate-mapping>
